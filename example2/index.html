@@ -1,0 +1,25 @@
+<!doctype html>
+<head>
+  <title>Repeat - ngNebraskaAnimate</title>
+  <link href='https://fonts.googleapis.com/css?family=Josefin+Sans' rel='stylesheet' type='text/css'>
+  <link href="../bower_components/animate.css/animate.min.css" rel="stylesheet" type="text/css">
+  <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body ng-app="ngNebraskaAnimateExample2" ng-controller="AnimationController as animateCtrl">
+
+  <div id="main">
+    <div>
+      <button ng-click="animateCtrl.showGrid()">Show</button>
+      <button ng-click="animateCtrl.hideGrid()">Hide</button>
+    </div>
+
+    <div class="container">
+      <div ng-repeat="items in animateCtrl.grid track by $index" class="grid-block"></div>
+    </div>
+  </div>
+
+  <script src="../bower_components/angular/angular.min.js"></script>
+  <script src="../bower_components/angular-animate/angular-animate.min.js"></script>
+  <script src="example2.js"></script>
+</body>
+</html>

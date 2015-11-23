@@ -1,0 +1,30 @@
+<!doctype html>
+<head>
+  <title>ngNebraskaAnimate</title>
+  <link href='https://fonts.googleapis.com/css?family=Josefin+Sans' rel='stylesheet' type='text/css'>
+  <link href="bower_components/animate.css/animate.min.css" rel="stylesheet" type="text/css">
+  <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body ng-app="ngNebraskaAnimate" ng-controller="AnimationController as animateCtrl">
+
+  <div id="main">
+
+    <div class="talk-title">
+      <div ng-repeat="gridRow in animateCtrl.grid" class="grid-row my-animation" ng-animate-children>
+        <div ng-repeat="item in gridRow track by $index" class="block my-animation" ng-class="{ 'block-blue': item }">
+          {{item}}
+        </div>
+      </div>
+    </div>
+
+    <div class="my-info">
+      <h3>Jacob Parish</h3>
+      <p></p>
+    </div>
+  </div>
+
+  <script src="bower_components/angular/angular.min.js"></script>
+  <script src="bower_components/angular-animate/angular-animate.min.js"></script>
+  <script src="intro.js"></script>
+</body>
+</html>
