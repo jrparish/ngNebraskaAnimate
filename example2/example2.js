@@ -10,7 +10,7 @@
     vm.hideGrid = hideGrid;
 
     function showGrid() {
-      vm.grid = Array.apply(null, Array(50)).map(Number.prototype.valueOf,0);;
+      vm.grid = Array.apply(null, Array(50)).map(Number.prototype.valueOf,0);
     }
 
     function hideGrid() {
